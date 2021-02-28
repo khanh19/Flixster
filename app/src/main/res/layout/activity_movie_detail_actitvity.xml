@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MovieDetailActivity"
+    android:orientation="horizontal"
+    android:background="@color/black"
+    >
+
+    <com.google.android.youtube.player.YouTubePlayerView
+        android:id="@+id/player"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"/>
+
+    <TextView
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:paddingLeft="10dp"
+        android:transitionName="title"
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/player"
+        android:layout_alignParentStart="true"
+        android:text="Movie Title"
+
+        android:textAppearance="@android:style/TextAppearance.Large"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:textColor="@color/white"
+        android:textStyle="italic"
+        android:id="@+id/tvOverview"
+        android:paddingLeft="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:layout_below="@+id/rbVoteAverage"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <RatingBar
+        android:id="@+id/rbVoteAverage"
+        style="@style/Widget.AppCompat.RatingBar.Small"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvTitle"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:isIndicator="true"
+        android:numStars="10"
+        android:paddingLeft="10dp"
+        android:stepSize="0.5"
+        android:theme="@style/RatingBar" />
+</RelativeLayout>
